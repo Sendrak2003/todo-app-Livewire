@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('todo_list_id')->constrained()->onDelete('cascade');
             $table->string('name');
             $table->string('description')->nullable();
-            $table->enum('status', ['Публичный', 'Приватный', 'Завершённый', 'Отменённый'])->default('приватный');
+            $table->enum('status', ['Публичный', 'Приватный', 'Завершённый', 'Отменённый'])->default('Приватный');
             $table->timestamps();
         });
     }
